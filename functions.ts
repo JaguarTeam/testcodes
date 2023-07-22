@@ -1,5 +1,5 @@
 
-function getArrayComplement(arr:[]) {
+function getArrayComplement(arr:number[]) {
     const keyEntries = Object.fromEntries(arr.map( (num, index) => [num, true] ))
 
     const complementArray:number[] = []
