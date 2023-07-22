@@ -42,7 +42,7 @@ bun test
 this command will lookup for .test.ts file and run them.
 
 ## Live preview
-- here goes link to live preview 
+- [Live Preview](https://codedamn.com/playground/G8PxhOgohcj3-itbFupUf) Codedamn will allow to see and run the code in this repository without the need for downloading the bun runtime.
 ## Thoughts on implementation
 ### breaking down getArrayComplement function
 The first step is created an object where each element of the input array
