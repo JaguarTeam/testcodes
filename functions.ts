@@ -17,9 +17,9 @@ function getArrayIndexes(target:number, nums:number[]): number[]{
     for (let index = 0; index < nums.length; index++) {
         const element = nums[index];
         const complement = target - element;
-        const prevIndex = numMap.get(complement)
+        const prevIndex = numMap.get(complement)!
         if (numMap.has(complement) && prevIndex !== index) {
-            return [numMap.get(complement)!, index];
+            return [prevIndex, index];
         }
         numMap.set(element, index);
     }
