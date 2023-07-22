@@ -1,21 +1,17 @@
 
 function getArrayComplement(arr:[]) {
-    const maxN = arr.length;
-    const cleanArray =  arr//[...new Set(arr)]
-    const keyEntries = Object.fromEntries(cleanArray.map( (num, index) => [num, true] ))
+    const keyEntries = Object.fromEntries(arr.map( (num, index) => [num, true] ))
 
     const complementArray:number[] = []
-    for (let index = 1; index < maxN+1; index++) {
-        const current = index
-        const notInArrayItem = keyEntries[current]
+    for (let index = 1; index < arr.length+1; index++) {
+        const notInArrayItem = keyEntries[index]
         if(!Boolean(notInArrayItem))
-            complementArray.push(current)
+            complementArray.push(index)
     }
     return complementArray  
 }
 
 function getArrayIndexes(target:number, nums:number[]): number[]{
-    const output = []
     const numMap: Map<number, number> = new Map();
 
     for (let index = 0; index < nums.length; index++) {
@@ -27,7 +23,7 @@ function getArrayIndexes(target:number, nums:number[]): number[]{
         }
         numMap.set(element, index);
     }
-    return output
+    return []
 
 }
 export {getArrayComplement, getArrayIndexes}
